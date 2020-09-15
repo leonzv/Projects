@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <h2>Formulario de Cadastro</h2>
+    
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Cadastrar-se</button>
+    
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Cadastrar-se</h1>
+                
+                <h3>
+                    <img src="helpper-logo.png" alt= "logo" class="center">
+                </h3>
+
+                <p>Preencha os dados para se registrar.</p>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Coloque seu email" name="email" required>
+
+                <label for="psw"><b>Senha</b></label>
+                <input type="password" placeholder="Coloque sua senha" name="psw" required>
+
+                <label for="psw-repeat"><b>Repita a senha</b></label>
+                <input type="password" placeholder="Repita a senha" name="psw-repeat" required>
+
+                <label for="cpf"><b>CPF</b></label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('000.000.000-00');" name="cpf" required>
+                
+                <label for="cnpj"><b>CNPJ</b></label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('00.000.000/0000-00')">
+                
+                <label for="cep"><b>CEP</b></label>
+                <input name="cep" type="text" id="cep" onblur="pesquisacep(this.value);" name="cep" required /></label><br />
+
+                <label for="rua"><b>Rua</b></label>
+                <input name="rua" type="text" id="rua" size="60" /></label><br />
+
+                <label for="bairro"><b>Bairro</b></label>
+                <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+
+                <label for="cidade"><b>Cidade</b></label>
+                <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+                
+                <label for="estado"><b>Estado</b></label>
+                <input name="uf" type="text" id="uf" size="2" /></label><br />
+                
+                <label for="numero"><b>Numero</b></label>
+                <input name="numero"type="text" id="numero">
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar-me
+                </label>
+
+                <p>Criando sua conta, Você concorda com os nossos <a href="#" style="color:dodgerblue">Politicas de privacidade e Termos de uso</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancelar</button>
+                    <button type="submit" class="signupbtn">Cadastrar-se</button>
+                </div>
+            </div>
+        </form>
+    </div>    
+    
+        <script src="scp.js"></script>
+</body>
+
+</html>
