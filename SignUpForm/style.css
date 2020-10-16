@@ -37,12 +37,17 @@ button:hover {
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
+  border-radius: 100px;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 /* tamanho dos botoes cancelar e cadastrar */
 .cancelbtn, .signupbtn {
   float: left;
   width: 50%;
+  padding: 14px 20px;
+  border-radius: 100px;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 
@@ -68,7 +73,8 @@ button:hover {
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto; 
-  border: 1px solid #888;
+  border-radius: 30px;
+  border: 2px solid rgb(0, 0, 0);
   width: 80%; 
 }
 
@@ -111,13 +117,6 @@ hr {
 h3{
     text-align: center;
     height: 100px;
-}
-img{
-    text-align: center;
-    padding: 50px;
-    background: url(images/helpper-logo.png) no-repeat;
-    background-size: 350px;
-    text-indent: -10000px
 }
 .center{
     display: block;
